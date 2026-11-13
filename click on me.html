@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Button Clicker by JENOMIC</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .brand {
+            font-size: 28px;
+            letter-spacing: 4px;
+            color: #ff4a4a;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+        .score-box {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #aaaaaa;
+        }
+        .main-btn {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            border: 2px solid #ff4a4a;
+            padding: 20px 50px;
+            font-size: 22px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.1s ease;
+            box-shadow: 0 0 15px rgba(255, 74, 74, 0.2);
+        }
+        .main-btn:active {
+            transform: scale(0.95);
+            background-color: #ff4a4a;
+            box-shadow: 0 0 25px rgba(255, 74, 74, 0.5);
+        }
+        footer {
+            margin-top: 60px;
+            font-size: 14px;
+            color: #555555;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="brand">JENOMIC</div>
+
+    <div class="score-box">SCORE: <span id="score">0</span></div>
+
+    <button class="main-btn" onclick="clickButton()">CLICK ME</button>
+
+    <footer>by JENOMIC</footer>
+
+    <script>
+        let count = 0;
+        function clickButton() {
+            count++;
+            document.getElementById('score').innerText = count;
+        }
+    </script>
+
+</body>
+</html>
